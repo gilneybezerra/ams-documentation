@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia do Usuário - Sala de Situação &mdash; Documentação Sala de Situação 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/style.css?v=659b1e63" />
+
+          <link rel="stylesheet" type="text/css" href="../_static/style.css?v=659b1e63" />
+
+      <!-- INSIRA AQUI O CSS DO MODAL -->
+      <style>
+.modal {
+  display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+  width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);
+}
+.modal img { 
+  margin: auto; display: block; 
+  max-width: 100vw; max-height: 100vh; 
+  width: auto; height: auto; 
+  border-radius: 8px; 
+}
+.close { 
+  position: absolute; top: 15px; right: 35px; color: #f1f1f1; 
+  font-size: 40px; font-weight: bold; cursor: pointer; 
+}
+.modal img:hover { transform: scale(1.02); }
+      </style>
+
+      <script src="../_static/jquery.js?v=5d32c60e"></script>  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c0c8e3fa"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=71a39b36"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="prev" title="Documentação do Sala de Situação" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sala de Situação
+              <img src="../_images/logo_ams.svg"  class="logo" alt="Logo" style="height: 200px; width: auto;"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" aria-label="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">DOCUMENTAÇÃO</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guia do Usuário - Sala de Situação</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#o-que-e-a-sala-de-situacao-do-terrabrasilis">O que é a Sala de Situação do TerraBrasilis?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conceitos-importantes">Conceitos importantes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#celula">Célula</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#categorias-fundiarias">Categorias Fundiárias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#perfil">Perfil</a></ul>
+<li class="toctree-l2"><a class="reference internal" href="#funcionalidades-da-sala-de-situacao-do-terrabrasilis">Funcionalidades da Sala de Situação do TerraBrasilis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#selecao-e-filtro-de-area">Seleção e Filtro de Área</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#indicadores-agregados-em-unidades-espaciais-e-temporais">Indicadores agregados em Unidades Espaciais e Temporais</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#quais-indicadores-estao-disponiveis">Quais indicadores estão disponíveis?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quais-unidades-espaciais-sao-suportadas">Quais unidades espaciais são suportadas?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quais-unidades-temporais-estao-disponiveis">Quais unidades temporais estão disponíveis?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#perfil-de-cada-unidade">Perfil de Cada Unidade</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#evolucao-temporal-do-indicador">Evolução temporal do indicador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distribuicao-por-categorias-fundiarias-e-car">Distribuição por categorias fundiárias e CAR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#opcoes-de-salvamento">Opções de Salvamento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sala-de-situacao-municipal">Sala de Situação Municipal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risco-de-propagacao-de-fogo">Risco de Propagação de Fogo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risco-de-desmatamento-curto-prazo">Risco de Desmatamento (Curto Prazo)</a></li>
+
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sala de Situação</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Guia do Usuário - Sala de Situação</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="guia-do-usuario-sala-de-situacao">
+<h1>Guia do Usuário - Sala de Situação<a class="headerlink" href="#guia-do-usuario-sala-de-situacao" title="Link para este cabeçalho"></a></h1>
+<p>Deselvolvido por:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="https://www.gov.br/inpe/pt-br"><img alt="INPE - Instituto Nacional de Pesquisas Espaciais" height="127" src="../_images/logo_inpe_mcti.png" width="400" />
+</a>
+</figure>
+<p>Colaboradores:</p>
+<figure class="align-center" style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-bottom: -20px;">
+    <a href="https://www.ufmg.br/" target="_blank" rel="noopener noreferrer">
+      <img src="../_images/logo_ufmg.png" alt="UFMG" style="height: 80px; width: auto;">
+    </a>
+
+    <a href="https://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">
+      <img src="../_images/logo_ibama.png" alt="IBAMA" style="height: 100px; width: auto;">
+    </a>
+  </div>
+
+  <div style="margin-top: 0px; margin-bottom: -10px;">
+    <a href="https://www.semas.pa.gov.br/" target="_blank" rel="noopener noreferrer">
+      <img src="../_images/logo_para.svg" alt="Governo do Pará" style="height: 110px; width: auto;">
+    </a>
+  </div>
+
+  <div style="margin-top: 0px;">
+    <a href="https://www.itc.nl/" target="_blank" rel="noopener noreferrer">
+      <img src="../_images/logo_twente.png" alt="University of Twente" style="height: 70px; width: auto;">
+    </a>
+  </div>
+
+</figure>
+</section>
+<hr class="docutils" />
+<section id="o-que-e-a-sala-de-situacao-do-terrabrasilis">
+<h2>O que é a Sala de Situação do TerraBrasilis?<a class="headerlink" href="#o-que-e-a-sala-de-situacao-do-terrabrasilis" title="Link para este cabeçalho"></a></h2>
+<p>A Sala de Situação do TerraBrasilis
+(<a class="reference external" href="https://terrabrasilis.dpi.inpe.br/ams/">https://terrabrasilis.dpi.inpe.br/ams/</a>)
+é uma ferramenta inovadora desenvolvida através de uma colaboração entre
+pesquisadores do Instituto Nacional de Pesquisas Espaciais (INPE) e da
+Universidade Federal de Minas Gerais (UFMG), com o apoio da Secretaria de Meio
+Ambiente e Sustentabilidade do Pará (SEMAS-PA), do Centro Nacional de
+Monitoramento e Informações Ambientais do IBAMA (CENIMA/IBAMA) e Faculdade de Geociências da Informação e Observação da Terra da Universidade de Twente.</p>
+<p>Lançada inicialmente em junho de 2021 para a Amazônia, a ferramenta foi posteriormente estendida para 
+cobrir todo o território nacional. Porém, a disponibilidade de alguns indicadores ainda varia conforme o bioma.</p>
+<p>Seu objetivo principal é complementar as funcionalidades dos demais painéis do
+<a href="https://terrabrasilis.dpi.inpe.br/" target="_blank" rel="noopener noreferrer">TerraBrasilis</a>, oferecendo uma visualização sinótica de indicadores de áreas
+críticas de:</p>
+<ul class="simple">
+<li><p>Desmatamento</p></li>
+<li><p>Degradação florestal</p></li>
+<li><p>Corte seletivo</p></li>
+<li><p>Mineração</p></li>
+<li><p>Focos de calor</p></li>
+</ul>
+<p>A ferramenta integra alertas dos sistemas <strong>DETER</strong> e <strong>QUEIMADAS</strong> do INPE,
+atualizados diariamente, subsidiando o planejamento de ações de fiscalização
+por instituições federais e estaduais, além de apoiar o combate a incêndios
+florestais.</p>
+<p>A Sala de Situação é aberta e gratuita, permitindo que sociedade civil,
+iniciativa privada e governos acompanhem e exijam ações para o controle desses
+processos nos biomas monitorados.</p>
+<p>Ela foi desenvolvida no contexto do <strong>Programa de Monitoramento dos Biomas Brasileiros (<a href="https://data.inpe.br/biomasbr/" target="_blank" rel="noopener noreferrer">BiomasBR</a>)</strong> do INPE, que opera projetos como o PRODES e o DETER,
+utilizando sensoriamento remoto para monitorar a cobertura florestal.</p>
+<p>O portal é integrado à plataforma TerraBrasilis e foi projetado para ser
+acessível e transparente. Todo o código-fonte está disponível publicamente em:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/terrabrasilis/ams">https://github.com/terrabrasilis/ams</a></p></li>
+</ul>
+<p>A Sala de Situação do TerraBrasilis é uma plataforma licenciada sob a <strong>GPLv3</strong>,
+garantindo liberdade de uso, estudo, modificação e redistribuição do sistema.</p>
+<p><strong>Tecnologias utilizadas</strong></p>
+<p>As principais tecnologias empregadas no desenvolvimento da ferramenta incluem:</p>
+<ul class="simple">
+<li><p><strong>Python</strong>: processamento de dados e backend</p></li>
+<li><p><strong>JavaScript</strong>: interatividade do frontend</p></li>
+<li><p><strong>PL/pgSQL</strong>: procedimentos e funções no PostgreSQL</p></li>
+<li><p><strong>CSS</strong>: estilização da interface</p></li>
+<li><p><strong>HTML</strong>: estrutura das páginas web</p></li>
+</ul>
+<p>Essa combinação garante robustez, interoperabilidade e escalabilidade à
+plataforma.</p>
+</section>
+<hr class="docutils" />
+<section id="conceitos-importantes">
+<h2>Conceitos Importantes<a class="headerlink" href="#conceitos-importantes" title="Link para este cabeçalho"></a></h2>
+<p>A Sala de Situação do TerraBrasilis integra diferentes fontes de monitoramento 
+e produz indicadores territoriais para apoiar a identificação e a priorização de áreas críticas. 
+Para isso, o sistema adota unidades e camadas de referência que padronizam a 
+análise no espaço e no tempo. Nesta seção, descrevemos os conceitos importantes 
+que estruturam essas análises — em especial as células, que organizam a agregação 
+espacial dos eventos, e as categorias fundiárias, que fornecem o contexto 
+territorial e orientam a interpretação dos resultados em cenários com sobreposições e incertezas.</p>
+<section id="celula">
+<h3>Célula<a class="headerlink" href="#celula" title="Link para este cabeçalho"></a></h3>
+<p>Células são unidades regulares de análise espacial (malhar regular) usadas pela Sala de Situação do TerraBrasilis 
+para organizar e sintetizar grandes volumes de dados de monitoramento. 
+Em cada célula, os alertas do DETER e os focos do QUEIMADAS 
+(e outros indicadores, como risco) são agregados por período para 
+gerar indicadores comparáveis no território.
+Por serem padronizadas e multi-escala (150 km × 150 km, 25 km ×25 km e, em análises locais, 5 km × 5 km), 
+as células permitem uma leitura que vai do panorama sinótico ao detalhe, 
+apoiando a priorização de áreas críticas, a análise do histórico 
+temporal e a interpretação por categorias fundiárias no processo de decisão e coordenação de ações.</p>
+<section id="categorias-fundiarias">
+<h3>Categorias Fundiárias<a class="headerlink" href="#categorias-fundiarias" title="Link para este cabeçalho"></a></h3>
+<p>As Categorias Fundiárias na Sala de Situação são um produto de integração 
+de múltiplas fontes (federal e estadual) para classificar o território 
+em classes exclusivas. Devido a sobreposições e incertezas fundiárias, 
+o sistema aplica uma hierarquia de prioridade para atribuir cada evento (ex.: alerta DETER) 
+a uma única categoria, viabilizando filtros, percentuais no perfil das unidades e análises comparáveis.</p>
+<p>Na prática, essa camada funciona como um mosaico fundiário: para cada localização, 
+o sistema atribui uma única categoria com base em regras de prioridade.</p>
+<p>As categorias fundiárias incluem:</p>
+<ul class="simple">
+<li><p>Terras Indígenas (TI)</p></li>
+<li><p>Unidades de Conservação (UC)</p></li>
+<li><p>Área de Proteção Ambiental (APA)</p></li>
+<li><p>Assentamentos Rurais</p></li>
+<li><p>Florestas Públicas Não Destinadas (FPND)</p></li>
+<li><p>Áreas com CAR</p></li>
+<li><p>Indefinido</p></li>
+</ul>
+<p>Regra de prioridade em sobreposições<p>
+<p>Quando há sobreposição de categorias, aplica-se a seguinte prioridade:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre style="font-size: 16px;"><span></span><span class="n">TI</span> <span class="o">&gt;</span> <span class="n">UC</span> <span class="p">(</span><span class="n">exceto</span> <span class="n">APA</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">Assentamentos</span> <span class="o">&gt;</span> <span class="n">APA</span> <span class="o">&gt;</span> <span class="n">CAR</span> <span class="o">&gt;</span> <span class="n">FPND</span> <span class="o">&gt;</span> <span class="n">Indefinido</span></pre></div></div>
+</section>
+<section id="perfil">
+<h3>Perfil<a class="headerlink" href="#perfil" title="Link para este cabeçalho"></a></h3>
+<p>Perfil é a síntese descritiva de uma unidade de análise (por exemplo, uma célula) 
+na Sala de Situação. Ele reúne, para um período selecionado, os indicadores agregados 
+(como alertas do DETER e focos do QUEIMADAS), a composição por categorias fundiárias 
+e o histórico temporal, permitindo interpretar os resultados, comparar unidades e 
+justificar a priorização de áreas críticas.</p>
+</section>
+<hr class="docutils" />
+<section id="funcionalidades-da-sala-de-situacao-do-terrabrasilis">
+<h2>Funcionalidades da Sala de Situação do TerraBrasilis<a class="headerlink" href="#funcionalidades-da-sala-de-situacao-do-terrabrasilis" title="Link para este cabeçalho"></a></h2>
+<p>A Sala de Situação oferece diversas funcionalidades para o monitoramento
+ambiental, permitindo compreender a complexidade e a heterogeneidade dos
+processos de desmatamento e fogo.</p>
+<figure class="align-center" id="id1">
+<img alt="Interface principal da Sala de Situação" src="../_images/figura_1.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 1 – Interface principal da Sala de Situação</em></span><a class="headerlink" href="#id1" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<section id="selecao-e-filtro-de-area">
+<h3>Seleção e Filtro de Área<a class="headerlink" href="#selecao-e-filtro-de-area" title="Link para este cabeçalho"></a></h3>
+<p>A ferramenta permite restringir análises por:</p>
+<ul class="simple">
+<li><p>Bioma</p></li>
+<li><p>Municípios de interesse (listas pré-definidas ou customizadas)</p></li>
+<li><p>Estado</p></li>
+</ul>
+<p>Exemplo de acesso direto por município (código IBGE):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://terrabrasilis.dpi.inpe.br/ams/panel?geocode=1300144">https://terrabrasilis.dpi.inpe.br/ams/panel?geocode=1300144</a></p></li>
+</ul>
+<figure class="align-center" id="id2">
+<img alt="Indicadores espacializados" src="../_images/figura_2.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 2 – Seleção do recorte espacial</em></span><a class="headerlink" href="#id2" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="indicadores-agregados-em-unidades-espaciais-e-temporais">
+<h3>Indicadores agregados em Unidades Espaciais e Temporais<a class="headerlink" href="#indicadores-agregados-em-unidades-espaciais-e-temporais" title="Link para este cabeçalho"></a></h3>
+<p>A ferramenta permite acompanhar os indicadores agregados em diferentes
+unidades espaciais e intervalos de tempo.</p>
+<section id="quais-indicadores-estao-disponiveis">
+<h4>Quais indicadores estão disponíveis?<a class="headerlink" href="#quais-indicadores-estao-disponiveis" title="Link para este cabeçalho"></a></h4>
+<p>A Sala de Situação integra dados de:</p>
+<ul class="simple">
+<li><p>Alertas de desmatamento (Amazônia, Cerrado e Pantanal) e degradação florestal (Amazônia e Pantanal) (DETER/INPE)</p></li>
+<li><p>Focos de fogo (Programa QUEIMADAS/INPE) (todos os biomas)</p></li>
+<li><p>Risco futuro de desmatamento de curto prazo (apenas para o bioma Amazônia)
+(Projeto <em>Deforestation Prediction System</em>)</p></li>
+<li><p>Risco de espalhamento de fogo (apenas para o bioma Cerrado)
+(Projeto Monitoramento Cerrado)</p></li>
+</ul>
+<figure class="align-center" id="id3">
+<img alt="Indicadores espacializados" src="../_images/figura_3.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 3 – Indicadores espacializados em diferentes unidades espaciais</em></span><a class="headerlink" href="#id3" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+<p>Os indicadores utilizam filtros baseados nas classes:</p>
+<ul class="simple">
+<li><p>DETER Desmatamento</p></li>
+<li><p>DETER Degradação</p></li>
+<li><p>DETER Corte Seletivo</p></li>
+<li><p>DETER Mineração</p></li>
+<li><p>Histórico de Focos (Programa Queimadas)</p></li>
+<li><p>Focos de hoje (Programa Queimadas)</p></li>
+<li><p>Risco de desmatamento</p></li>
+<li><p>Risco de espalhamento do fogo (somente para o Cerrado)</p></li>
+</ul>
+<p>O indicador de risco de desmatamento é disponibilizado apenas para usuários autenticados.</p>
+<p>Além dos recortes espaciais apresentados anteriormente, é possível selecionar a Categoria Fundiária que deseja analisar.</p>
+<figure class="align-center" id="id4">
+<img alt="Indicadores espacializados" src="../_images/figura_4.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 4 – Filtro de Categoria Fundiária</em></span><a class="headerlink" href="#id4" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="quais-unidades-espaciais-sao-suportadas">
+<h4>Quais unidades espaciais são suportadas?<a class="headerlink" href="#quais-unidades-espaciais-sao-suportadas" title="Link para este cabeçalho"></a></h4>
+<p>Os indicadores podem ser visualizados por:</p>
+<ul class="simple">
+<li><p>Estados</p></li>
+<li><p>Municípios</p></li>
+<li><p>Células regulares de:</p>
+<ul>
+<li><p>150 km × 150 km</p></li>
+<li><p>25 km × 25 km</p></li>
+<li><p>5 km × 5 km (disponível apenas para os recortes Estado, Municípios de interesse e Sala de Situação Municipal)</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id5">
+<img alt="Unidades espaciais" src="../_images/figura_5.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 5 – Unidades espaciais de agregamento dos indicadores</em></span><a class="headerlink" href="#id5" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="quais-unidades-temporais-estao-disponiveis">
+<h4>Quais unidades temporais estão disponíveis?<a class="headerlink" href="#quais-unidades-temporais-estao-disponiveis" title="Link para este cabeçalho"></a></h4>
+<p>Os usuários podem consultar indicadores em períodos de:</p>
+<ul class="simple">
+<li><p>7, 15, 30, 90 e 365 dias</p></li>
+<li><p>Intervalos customizados</p></li>
+</ul>
+<figure class="align-center" id="id6">
+<img alt="Controle temporal" src="../_images/figura_6.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 6 – Controle da unidade temporal</em></span><a class="headerlink" href="#id6" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<hr class="docutils" />
+<section id="perfil-de-cada-unidade">
+<h3>Perfil de Cada Unidade<a class="headerlink" href="#perfil-de-cada-unidade" title="Link para este cabeçalho"></a></h3>
+<p>A Sala de Situação gera um <strong> Perfil detalhado</strong> tanto para unidades espaciais específicas (células, municípios e estados) 
+quanto para o recorte selecionado como um todo (bioma ou conjunto de municípios de interesse).</p>
+<section id="evolucao-temporal-do-indicador">
+<h4>Evolução temporal do indicador<a class="headerlink" href="#evolucao-temporal-do-indicador" title="Link para este cabeçalho"></a></h4>
+<p>O perfil apresenta a evolução do indicador selecionado ao longo do tempo,
+normalmente considerando os últimos 20 períodos definidos pelo usuário.</p>
+<figure class="align-center" id="id7">
+<img alt="Evolução temporal" src="../_images/figura_7.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 7 – Visualizar Perfil</em></span><a class="headerlink" href="#id7" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<img alt="Evolução temporal" src="../_images/figura_8.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 8 – Evolução temporal do indicador</em></span><a class="headerlink" href="#id8" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="distribuicao-por-categorias-fundiarias-e-car">
+<h4>Distribuição por categorias fundiárias e CAR<a class="headerlink" href="#distribuicao-por-categorias-fundiarias-e-car" title="Link para este cabeçalho"></a></h4>
+<p>O perfil também mostra como os indicadores se distribuem entre categorias
+fundiárias e áreas com Cadastro Ambiental Rural (CAR).</p>
+<figure class="align-center" id="id9">
+<img alt="Categorias fundiárias" src="../_images/figura_9.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 9 – Distribuição por categoria fundiária</em></span><a class="headerlink" href="#id9" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id10">
+<img alt="Distribuição em relação ao CAR" src="../_images/figura_10.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 10 – Distribuição do indicador em relação ao CAR</em></span><a class="headerlink" href="#id10" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="opcoes-de-salvamento">
+<h3>Opções de Salvamento<a class="headerlink" href="#opcoes-de-salvamento" title="Link para este cabeçalho"></a></h3>
+<p>Os dados podem ser exportados em:</p>
+<ul class="simple">
+<li><p>CSV</p></li>
+<li><p>Shapefile</p></li>
+</ul>
+<p>O download pode ser feito por unidade espacial ou diretamente pelo diálogo do
+mapa.</p>
+<figure class="align-center" id="id11">
+<img alt="Opções de download" src="../_images/figura_11.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 11 – Opções de salvamento dos dados</em></span><a class="headerlink" href="#id11" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<hr class="docutils" />
+<section id="sala-de-situacao-municipal">
+<h2>Sala de Situação Municipal<a class="headerlink" href="#sala-de-situacao-municipal" title="Link para este cabeçalho"></a></h2>
+<p>A Sala de Situação Municipal permite análises focadas em um único município ou
+grupos de municípios, oferecendo maior granularidade espacial.</p>
+<p>Os indicadores são apresentados em células de:</p>
+<ul class="simple">
+<li><p>5 × 5 km</p></li>
+<li><p>25 × 25 km</p></li>
+<li><p>150 × 150 km</p></li>
+</ul>
+<p>Essa abordagem facilita políticas públicas direcionadas e monitoramento local.</p>
+<p>Formas de acesso incluem:</p>
+<ul class="simple">
+<li><p>Recorte por Municípios de Interesse</p></li>
+<li><p>Seleção direta no mapa</p></li>
+<li><p>Link direto por código IBGE</p></li>
+</ul>
+<p>Exemplo:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://terrabrasilis.dpi.inpe.br/ams/panel?geocode=1302405">https://terrabrasilis.dpi.inpe.br/ams/panel?geocode=1302405</a></p></li>
+</ul>
+<figure class="align-center" id="id12">
+<img alt="Recorte municipal" src="../_images/figura_12.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 12 – Acesso por município de interesse</em></span><a class="headerlink" href="#id12" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
+<img alt="Sala municipal" src="../_images/figura_13.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 13 – Visão geral da Sala de Situação Municipal</em></span><a class="headerlink" href="#id13" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="risco-de-propagacao-de-fogo">
+<h2>Risco de Espalhamento de Fogo<a class="headerlink" href="#risco-de-propagacao-de-fogo" title="Link para este cabeçalho"></a></h2>
+<p>Esse indicador foi desenvolvido no âmbito do projeto <strong>Desenvolvimento de sistemas de 
+prevenção de incêndios florestais e monitoramento da cobertura vegetal no 
+cerrado brasileiro (<a href="https://csr.ufmg.br/fipcerrado/pt/" target="_blank" rel="noopener noreferrer">FIP-Cerrado</a>)</strong>, pelo Centro de Sensoriamento Remoto – CSR da UFMG.
+O indicador apresenta o comportamento do fogo a partir de um ponto de 
+ignição e um conjunto de variáveis ambientais.</p>
+<figure class="align-center" id="id14">
+<img alt="Indicador de risco" src="../_images/figura_14.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 14 – Indicador de risco de espalhamento de fogo selecionado</em></span><a class="headerlink" href="#id14" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<hr class="docutils" />
+<section id="risco-de-desmatamento-curto-prazo">
+<h2>Risco de Desmatamento (Curto Prazo)<a class="headerlink" href="#risco-de-desmatamento-curto-prazo" title="Link para este cabeçalho"></a></h2>
+<p>Usuários cadastrados com credenciais especiais têm acesso ao indicador de risco
+futuro de desmatamento de curto prazo.</p>
+<p>Esse indicador foi desenvolvido no âmbito do projeto
+<strong>Deforestation Prediction System</strong>, em colaboração entre:</p>
+<ul class="simple">
+<li><p>MMA</p></li>
+<li><p>INPE</p></li>
+<li><p>IBAMA</p></li>
+<li><p>PUC-Rio</p></li>
+<li><p>Universidade de Twente</p></li>
+</ul>
+<p>Utilizando métodos de <strong>Inteligência Artificial</strong>, o sistema prevê áreas com
+risco de desmatamento nos próximos 15 dias, apoiando ações preventivas.</p>
+<figure class="align-center" id="id15">
+<img alt="Indicador de risco" src="../_images/figura_15.png" />
+<figcaption>
+<p><span class="caption-text"><em>Figura 15 – Indicador de risco de desmatamento selecionado</em></span><a class="headerlink" href="#id15" title="Link para esta imagem"></a></p>
+</figcaption>
+</figure>
+<!-- MODAL HTML -->
+<div id="zoomModal" class="modal" onclick="fecharModal()">
+  <img id="zoomImg" src="" alt="Zoom da imagem">
+  <span class="close" onclick="event.stopPropagation(); fecharModal()">&times;</span>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Documentação do TerraBrasilis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Direitos autorais 2026, INPE.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+
+      // INSIRA/ADICIONE AQUI AS FUNÇÕES DO ZOOM (SUBSTITUI TODO O SCRIPT)
+      function abrirModal(imgSrc, altText) {
+        const modal = document.getElementById('zoomModal');
+        const modalImg = document.getElementById('zoomImg');
+        modal.style.display = 'block';
+        modalImg.src = imgSrc;
+        modalImg.alt = altText;
+        document.body.style.overflow = 'hidden';
+      }
+      function fecharModal() {
+        const modal = document.getElementById('zoomModal');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        const imgs = document.querySelectorAll('figure.align-center img');
+        imgs.forEach(img => {
+          img.style.cursor = 'pointer';
+          img.style.transition = 'opacity 0.3s';
+          img.onclick = () => abrirModal(img.src, img.alt);
+          img.onmouseover = () => img.style.opacity = '0.8';
+          img.onmouseout = () => img.style.opacity = '1';
+        });
+      });
+      // ESC para fechar
+      window.onkeydown = (e) => { if(e.key==='Escape') fecharModal(); };
+  </script> 
+
+</body>
+</html>
